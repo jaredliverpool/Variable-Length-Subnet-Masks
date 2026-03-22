@@ -24,12 +24,31 @@ I repeated the process for the other three LANs including the point-to-point con
 
 ### 2. Assign the first usable address to the PC in each LAN
 
+I went into the "Config" settings for each PC. I added the first usable address to the PC, then I added the last usuable address to the default gateway, aka the router. I repeated the steps for LAN 1, 3, and 4.
+
 <img width="1690" height="1035" alt="Screenshot 2026-03-21 at 11 05 20 PM" src="https://github.com/user-attachments/assets/5ff7ffc0-4156-4de2-bd23-dcf4240ac781" />
 
 ### 3. Assign the last usable address to the router's interface in each LAN
 
-<img width="843" height="191" alt="Screenshot 2026-03-21 at 11 13 40 PM" src="https://github.com/user-attachments/assets/885e93bd-6d42-4477-af9f-a3514589e8e0" />
+I went into the router's CLI. I went into each interface, turned on the port with the command "no shutdown." I added the last usable address to the respected interface, and repeated the process for the other LANs, as well as the point-to-point connection.
+
+<img width="1027" height="277" alt="Screenshot 2026-03-22 at 12 46 00 PM" src="https://github.com/user-attachments/assets/e32fe9b7-48b0-4123-a921-571dbb103e51" />
+
+### 4. Configure static routes on each router so that all PCs can ping each other.
+
+I went into each router's CLI once more and I confired the static routes so that I have a route to each LAN on the other router.
+
+<img width="854" height="69" alt="Screenshot 2026-03-22 at 12 58 14 PM" src="https://github.com/user-attachments/assets/bed9f143-085f-4b45-93de-299f33143f18" />
+
+### 5. Test the connection by sending pings from one PC to the next
+
+I tested the connection to see if the PCs can oing each other. Sure enough, they did.
+
+<img width="1090" height="860" alt="Screenshot 2026-03-22 at 1 05 01 PM" src="https://github.com/user-attachments/assets/a1f2172c-076f-4dbf-823a-e7e8c7196db7" />
 
 
 
-**Query used to locate events:**
+
+
+
+
